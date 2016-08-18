@@ -1,0 +1,57 @@
+.progress-cmp {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+}
+
+.popover {
+  width: 450px;
+  position: absolute;
+  left: 0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.popover-titlebar {
+  padding: 5px;
+  background: #000;
+  color: #fff;
+}
+
+.popover-content {
+  padding: 1em;
+  color: #848282;
+  background: #ebebeb;
+  border-radius: 5px;
+}
+
+.popover-content-inner {
+  padding: 1em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.popover-progress-info > span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.popover-progress-info > .bar-wrapper {
+  width: 220px;
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.popover-progress-info > .bar-wrapper > .bar {
+  display: inline-block;
+  background: #64bb64;
+  border-radius: 5px;
+}
+
+.popover-progress-info > .target {
+  background: #999999;
+  color: #fff;
+  padding: 5px;
+  vertical-align: middle;
+}
