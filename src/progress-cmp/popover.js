@@ -18,7 +18,8 @@ class Popover extends Component {
     super(props);
 
     this.state = {
-      progress: 0
+      progress: 0,
+      progressAmount: 0
     }
   }
 
@@ -37,8 +38,10 @@ class Popover extends Component {
       }
       else {
         progress += 1;
+
         this.setState({
-          progress
+          progress,
+          progressAmount: Math.round((target*progress)/100)
         });
       }
     }
@@ -73,11 +76,17 @@ class Popover extends Component {
           <div className="popover-content-inner">
 
             <div className="popover-progress-info">
-              <span>Reached: </span>
+              <span><strong>Reached:</strong></span>
               <span className="bar-wrapper">
                 <span
                   style={{width: `${this.state.progress}%`}}
                   className="bar">&nbsp;
+                </span>
+                <span
+                  style={{left: `${this.state.progress-5}%`}}
+                  className="indicator">
+                  <i className="material-icons">&#xE316;</i> <br />
+                  {`$${this.state.progressAmount}`}
                 </span>
               </span>
               <span className="target">
@@ -86,7 +95,10 @@ class Popover extends Component {
               </span>
             </div>
 
-            <p>{`You need $${target - reached} more to reach your target.`}</p>
+            <p className="popover-description">
+              <i className="info-icon material-icons">&#xE88E;</i>
+              {`You need $${target - reached} more to reach your target.`}
+            </p>
           </div>
         </div>
 

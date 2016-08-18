@@ -41,6 +41,7 @@
   width: 220px;
   background: #ccc;
   border-radius: 5px;
+  position: relative;
 }
 
 .popover-progress-info > .bar-wrapper > .bar {
@@ -49,9 +50,26 @@
   border-radius: 5px;
 }
 
+.popover-progress-info > .bar-wrapper > .indicator {
+  position: absolute;
+  top: 12px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+
 .popover-progress-info > .target {
   background: #999999;
   color: #fff;
   padding: 5px;
   vertical-align: middle;
+}
+
+.popover-description {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+.popover-description .info-icon {
+  color: #65aee8;
 }
