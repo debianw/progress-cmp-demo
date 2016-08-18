@@ -3,8 +3,8 @@
  */
 
 import React, { Component } from 'react';
-import AccountPage from './account-page';
-import './App.css';
+import AccountPage from '../account-page';
+import './styles.css';
 
 
 class App extends Component {
